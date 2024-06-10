@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="search-container">
+  <input type="text" placeholder="Buscar" [(ngModel)]="searchTerm" (input)="filterCharacters()">
+</div>
+<div class="character-list-container">
+  <h1>Personajes</h1>
+  <ul class="character-list">
+    <li *ngFor="let character of filteredCharacters" class="character-item">
+      <a class="character-link">
+        <div class="character-image-wrapper">
+          <img [src]="character.image" alt="{{ character.name }}" class="character-image"/>
+        </div>
+        <h2>{{ character.name }}</h2>
+        <p><strong>Casa:</strong> {{ character.house }}</p>
+        <p><strong>Especie:</strong> {{ character.species }}</p>
+        <p><strong>Peso:</strong> {{ character.weight }}</p>
+        <p><strong>Estado civil:</strong> {{ character.marital_status }}</p>
+        <p><strong>Nacionalidad:</strong> {{ character.nationality }}</p>
+        <p><strong>Alias:</strong> {{ character.alias_names.join(', ') }}</p>
+        <p><strong>Género:</strong> {{ character.gender }}</p>
+        <p><strong>Fecha de nacimiento:</strong> {{ character.born }}</p>
+      </a>
+    </li>
+  </ul>
+</div>

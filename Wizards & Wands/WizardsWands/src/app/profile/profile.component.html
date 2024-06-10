@@ -1,0 +1,22 @@
+<div class="profile-container" *ngIf="usuario">
+  <form class="profile-form" (ngSubmit)="update()">
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="usuario.email" name="email" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" [(ngModel)]="usuario.password" name="password" required>
+    </div>
+    
+    <div class="input-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    </div>
+    
+    <button class="btn-update" type="submit">Update</button>
+  </form>
+  <button class="btn-delete" (click)="delete()">Delete Account</button>
+  <p class="message">{{ message }}</p>
+</div>

@@ -1,0 +1,14 @@
+<div class="book-list-container">
+  <h1>Libros de Harry Potter</h1>
+  <ul class="book-list">
+    <li *ngFor="let book of books" class="book-item">
+      <a [routerLink]="['/books', book.id]" class="book-link">
+        <div class="book-cover-wrapper">
+          <img [src]="book.attributes.cover" alt="{{ book.attributes.title }}" class="book-cover"/>
+        </div>
+        <h2>{{ book.attributes.title }}</h2>
+        <p>{{ book.attributes.author }}</p>
+      </a>
+    </li>
+  </ul>
+</div>

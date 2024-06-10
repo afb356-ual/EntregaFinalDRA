@@ -1,0 +1,24 @@
+<div class="home-container">
+  <div class="logo-container">
+    <img src="assets/hogwarts.png" alt="Hogwarts Crest" class="crest">
+  </div>
+<div class="content-container">
+  <h2>Registro</h2>
+  <form (ngSubmit)="register()">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="usuario.email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" [(ngModel)]="usuario.password" name="password" required>
+    </div>
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    </div>
+    <button class="btn" type="submit">Register</button>
+    <p>{{ message }}</p>
+  </form>
+</div>
+

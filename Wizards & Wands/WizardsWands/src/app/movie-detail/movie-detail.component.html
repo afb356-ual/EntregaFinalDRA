@@ -1,0 +1,21 @@
+<div class="container" *ngIf="movie">
+  <div class="detail-header">
+    <img [src]="movie.attributes.poster" alt="{{ movie.attributes.title }}" class="detail-cover" />
+    <div class="detail-info">
+      <h1>{{ movie.attributes.title }}</h1>
+      <h2>Por {{ movie.attributes.directors.join(', ') }}</h2>
+    </div>
+  </div>
+  <div class="detail-description">
+    <p>{{ movie.attributes.summary }}</p>
+    <p>Directores: {{ movie.attributes.directors.join(', ') }}</p>
+    <p>Productores: {{ movie.attributes.producers.join(', ') }}</p>
+    <p>Compositores: {{ movie.attributes.music_composers.join(', ') }}</p>
+    <p>Fecha de lanzamiento: {{ movie.attributes.release_date | date }}</p>
+    <p>Duración: {{ movie.attributes.running_time }}</p>
+    <p>Presupuesto: {{ movie.attributes.budget }}</p>
+    <p>Recaudación: {{ movie.attributes.box_office }}</p>
+    <a [href]="movie.attributes.trailer" target="_blank">Ver tráiler  </a>
+    <a [href]="movie.attributes.wiki" target="_blank">Más información</a>
+  </div>
+</div>

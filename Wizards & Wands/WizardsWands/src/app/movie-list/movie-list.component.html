@@ -1,0 +1,14 @@
+<div class="movie-list-container">
+  <h1>Películas de Harry Potter</h1>
+  <ul class="movie-list">
+    <li *ngFor="let movie of movies" class="movie-item">
+      <a [routerLink]="['/movies', movie.id]" class="movie-link">
+        <div class="movie-poster-wrapper">
+          <img [src]="movie.attributes.poster" alt="{{ movie.attributes.title }}" class="movie-poster"/>
+        </div>
+        <h2>{{ movie.attributes.title }}</h2>
+        <p>{{ movie.attributes.director }}</p>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,10 @@
+<h1>Hechizos de Harry Potter</h1>
+<div class="spell-list">
+  <div class="spell-item" *ngFor="let spell of spells">
+    <img [src]="spell.attributes.image || 'assets/spell.jpg'" alt="{{ spell.attributes.name }}" class="spell-image">
+    <div class="spell-info">
+      <h3>{{ spell.attributes.name }}</h3>
+      <p>{{ spell.attributes.effect }}</p>
+    </div>
+  </div>
+</div>

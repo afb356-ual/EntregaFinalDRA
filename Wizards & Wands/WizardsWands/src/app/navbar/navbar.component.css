@@ -1,0 +1,46 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0D3D68, #53A4EF);
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+}
+
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar ul li {
+  margin-bottom: 50px; /* Aumentamos el espacio entre los elementos aún más */
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  color: #ffd700;
+}

@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  
+}
+
+.search-container {
+  margin: 20px;
+  text-align: center;
+  margin-left: 280px; 
+}
+
+.search-container input {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 2px solid #53A4EF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #0D3D68;
+  color: #ffffff;
+}
+
+.search-container input::placeholder {
+  color: #A9D5FF;
+}
+
+.character-list-container {
+  background: linear-gradient(to bottom, #0a0a23, #000);
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px; /* Ajuste para mover el contenedor hacia abajo */
+  margin-left: 250px; /* Mueve el contenedor a la derecha */
+}
+
+.character-list-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #0D3D68, #53A4EF);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.character-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar los elementos */
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.character-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: calc(33.333% - 40px);
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+main {
+  margin-left: 200px;
+  padding: 20px;
+}
+.character-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+.character-image-wrapper {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.character-image {
+  width: 30%; /* Reduce el tamaño de la imagen */
+  height: auto;
+  border-radius: 10px;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}

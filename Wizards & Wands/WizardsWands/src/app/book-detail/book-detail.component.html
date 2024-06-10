@@ -1,0 +1,18 @@
+<div class="book-detail-container" *ngIf="book">
+  <h1>{{ book.attributes.title }}</h1>
+  <img [src]="book.attributes.cover" alt="{{ book.attributes.title }}" />
+  <p>{{ book.attributes.dedication }}</p>
+  <p>{{ book.attributes.summary }}</p>
+  <p>Autor: {{ book.attributes.author }}</p>
+  <p>Páginas: {{ book.attributes.pages }}</p>
+  <p>Fecha de lanzamiento: {{ book.attributes.release_date | date }}</p>
+  <a [href]="book.attributes.wiki" target="_blank">Más información</a>
+
+  <h2>Capítulos</h2>
+  <div *ngIf="isLoading">Cargando capítulos...</div>
+  <ul *ngIf="!isLoading">
+    <li *ngFor="let chapter of chapters">
+      <h3>{{ chapter.attributes.title }}</h3>
+    </li>
+  </ul>
+</div>
